@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: shopify-order-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: SHOPIFY_ACCESS_TOKEN
+        value: tu_token_aqui
+      - key: SHOPIFY_STORE
+        value: 5denwh-06
