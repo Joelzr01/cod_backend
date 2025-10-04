@@ -5,7 +5,8 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: ./start.sh
     envVars:
-      - key: SHOPIFY_ACCESS_TOKEN
-        value: tu_token_aqui
-      - key: SHOPIFY_STORE
-        value: 5denwh-06
+      - key: SHOPIFY_SHOP          # <-- igual que en app.py
+        value: 5denwh-06.myshopify.com
+      - key: SHOPIFY_API_TOKEN     # <-- igual que en app.py
+        value: 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
+
