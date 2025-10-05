@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import requests
 import os
 from dotenv import load_dotenv
+from flask_cors import CORS
+
 
 load_dotenv()
 
@@ -9,6 +11,7 @@ SHOP = os.getenv("SHOPIFY_SHOP")
 TOKEN = os.getenv("SHOPIFY_API_TOKEN")
 
 app = Flask(__name__)
+CORS(app, origins=["https://5denwh-06.myshopify.com"])
 
 @app.route('/')
 def home():
